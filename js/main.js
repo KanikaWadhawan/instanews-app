@@ -1,7 +1,8 @@
-console.log("hello world");
 
-function sayHello(){
-    return "Hello world";
-}
 
-alert("wrong");
+$('#select-menu').on('change', function() {
+    const selected = $(this).val();
+    if (selected !== '') {
+      console.log('The value you picked is: ' + selected);
+    }
+  });
