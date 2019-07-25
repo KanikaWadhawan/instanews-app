@@ -1,13 +1,15 @@
 *{
     box-sizing: border-box;
 }
-
+html{
+    font-family: 'Open Sans', Arial, sans-serif;
+}
 body{
    
     background: black;
     color:#ffff;
     font-size:12px;
-    font-family: 'Open Sans Light',Arial, sans-serif;
+    
 }
 
 .container{
