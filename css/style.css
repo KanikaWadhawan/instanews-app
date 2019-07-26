@@ -98,6 +98,14 @@ body{
     max-width: 250px;
 }
 
+.bckg-img{
+    display: flex;
+    flex-direction: row;
+    width: 200vw;
+    height: 200vh;
+    background-position: 50%;
+    background-size: cover;
+}
 .footer{
     margin-top: 72px;
     
