@@ -101,8 +101,12 @@ body{
 .bckg-img{
     display: flex;
     flex-direction: row;
-    width: 200vw;
-    height: 200vh;
+    flex-wrap: wrap;
+    height:300px; 
+    flex: 1 0 25%;
+    width:50%;
+    /* width: 200vw;
+    height: 200vh; */
     background-position: 50%;
     background-size: cover;
 }
