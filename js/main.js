@@ -1,7 +1,8 @@
 $(function () {
-  const resLoading = "<li class='loading-msg'>Loading...</li>";
+  //const resLoading = "<li class='loading-msg'>Loading...</li>";
   const resFail = "<li>Sorry, something went terribly wrong</li>";
-
+  const $loader = $(".loader");
+  const $loadTime = 1000;
 
   $('#select-menu').on('change', function (e) {
     e.preventDefault();
@@ -12,20 +13,23 @@ $(function () {
     }
   });
 
+
   function loadArticles(selected) {
     const $selectedList = $(".selected-list");
-   
+
     $selectedList.html("");
-    $selectedList.append(resLoading);
+    // $selectedList.append(resLoading);
+    $loader.fadeIn($loadTime);
 
     $.ajax({
       method: 'get',
       url: 'https://api.nytimes.com/svc/topstories/v2/' + selected + '.json?api-key=aH4FAhLkiG9ICtGxYuBVuGhjQviN4Geb'
     }).done(function (data) {
-     // console.log(data.results);
+      // console.log(data.results);
+      $loader.fadeOut($loadTime);
       const results = data.results;
 
-      const filteredResults = results.filter(function(article){
+      const filteredResults = results.filter(function (article) {
         return article.multimedia.length;
       }).slice(0, 12);
 
@@ -34,8 +38,8 @@ $(function () {
       console.log("filtered", filteredResults);
 
       $.each(filteredResults, function (index, value) {
-          console.log(value);
-         $selectedList.append(`
+        console.log(value);
+        $selectedList.append(`
               <li class="result-data">
               <a href ="${value.url}" >
       <div class="bckg-img" style="background: url(${value.multimedia[4].url})">
@@ -50,7 +54,8 @@ $(function () {
       $selectedList.append(resFail);
     }).always(function () {
       // $selectedList.html("");
-     $('.loading-msg').remove();
+      // $('.loading-msg').remove();
+     // $loader.fadeOut($loadTime);
     });
   }
 
