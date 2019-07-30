@@ -1,7 +1,7 @@
 $(function () {
   //const resLoading = "<li class='loading-msg'>Loading...</li>";
   const resFail = "<li>Sorry, something went terribly wrong</li>";
-  const $loader = $(".loader");
+  const $loader = $(".loader-container");
   const $loadTime = 1000;
 
   $('#select-menu').on('change', function (e) {
@@ -42,8 +42,8 @@ $(function () {
         $selectedList.append(`
               <li class="result-data">
               <a href ="${value.url}" >
-      <div class="bckg-img" style="background: url(${value.multimedia[4].url})">
-        <p class="title">${value.title}</p>
+      <div class="bckg-img" style="background-image: url(${value.multimedia[4].url})">
+        
         <p class="abstract">${value.abstract}</p>
         </div>
         </a>

@@ -57,14 +57,26 @@ body {
   color: #fff;
   font-size: 16px; }
 
-.loader {
+.loader-container {
   display: none;
-  height: 100px;
-  width: 100px;
+  height: 100vh;
+  width: 100vw;
   position: absolute; }
 
+.loader {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .image-loader {
-  width: 100%; }
+  width: 10%; }
 
 .container {
   display: -webkit-box;
@@ -120,8 +132,14 @@ img {
 .select-menu {
   margin-top: 16px; }
 
+select:focus {
+  outline: none; }
+
 a {
   text-decoration: none; }
+
+.bckg-img {
+  background-size: cover; }
 
 .footer p {
   color: #c2c2c2;
@@ -149,7 +167,8 @@ a {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
-    max-width: 50%; }
+    max-width: 50%;
+    position: relative; }
   .select-section {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 75%;
@@ -175,15 +194,11 @@ a {
     background: rgba(0, 0, 0, 0.6);
     bottom: 0;
     color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     font-size: 10px;
     font-size: 1rem;
     padding: .5rem;
-    position: relative;
-    width: 100%;
-    margin-top: 222px; } }
+    position: absolute;
+    width: 100%; } }
 
 @media only screen and (min-width: 1000px) {
   body {
@@ -215,7 +230,8 @@ a {
   .result-data {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 25%;
-            flex: 0 1 25%; }
+            flex: 0 1 25%;
+    position: relative; }
   .select-section {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 75%;
@@ -241,15 +257,11 @@ a {
     background: rgba(0, 0, 0, 0.6);
     bottom: 0;
     color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     font-size: 10px;
     font-size: 1rem;
     padding: .5rem;
-    position: relative;
-    width: 100%;
-    margin-top: 222px; }
+    position: absolute;
+    width: 100%; }
   .footer p {
     margin-top: 127px;
     text-align: left;
