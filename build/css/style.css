@@ -117,20 +117,18 @@ img {
   text-align: center;
   display: block;
   width: 300vw;
-  margin-top: 171px;
-  margin-left: 16px;
-  margin-right: 78px; }
+  margin: 60px 0px 1rem 0px; }
 
 .select-section {
   display: inline-block;
   position: relative;
   text-align: center;
   margin-bottom: 1rem;
-  width: 100%;
-  margin-right: 53px; }
+  width: 100%; }
 
 .select-menu {
-  margin-top: 16px; }
+  margin-top: 16px;
+  cursor: pointer; }
 
 select:focus {
   outline: none; }
@@ -147,9 +145,7 @@ a {
   margin-bottom: 3rem;
   text-align: center;
   padding: 0 2rem;
-  margin-bottom: 27px;
-  margin-top: 43px;
-  margin-right: 60px; }
+  margin-top: 43px; }
 
 .footer p span {
   text-transform: uppercase; }

@@ -61,9 +61,10 @@ img{
     text-align: center;
     display: block;
     width: 300vw;
-    margin-top: 171px;
-    margin-left: 16px;
-    margin-right: 78px;
+    margin: 60px 0px 1rem 0px;
+    // margin-top: 171px;
+    // margin-left: 16px;
+    // margin-right: 78px;
 }
 
 .select-section{
@@ -72,10 +73,11 @@ img{
     text-align: center;
     margin-bottom: 1rem;
     width: $width;
-    margin-right: 53px;
+    // margin-right: 53px;
 }
 .select-menu{
     margin-top: 16px;
+    cursor:pointer;
 }
 
 select:focus {
@@ -92,15 +94,18 @@ a{
 }
 
 
-.footer p{
-color:#c2c2c2;
-font-size: 12px;
-margin-bottom: 3rem;
-text-align: center;
-padding: 0 2rem;
-margin-bottom: 27px;
-margin-top: 43px;
-margin-right: 60px;
+.footer {
+    p{
+        color:$footer-text;
+        font-size: 12px;
+        margin-bottom: 3rem;
+        text-align: center;
+        padding: 0 2rem;
+        margin-top: 43px;
+//margin-bottom: 27px;
+
+// margin-right: 60px;
+}
 }
 
 .footer p span{
