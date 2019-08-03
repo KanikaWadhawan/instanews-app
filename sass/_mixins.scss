@@ -1,0 +1,36 @@
+@mixin desktop {
+    @media (min-width: $tablet-width) {
+      @content;
+    }
+  }
+
+
+@mixin desktop {
+    @media (min-width: $desktop-width) {
+      @content;
+    }
+  }
+
+  %base-logo {
+    flex: 0 1 25%;
+    margin: 0 1rem 0 0;
+    text-align: left;
+    max-width: 250px;
+ }
+
+ %base-selection {
+  flex: 0 1 75%;
+  text-align: left;
+  max-width: 250px;
+}
+
+%base-abstract {
+  background: rgba(0,0,0,.6);
+  bottom: 0;
+  color: #fff;
+  font-size: 10px;
+  font-size: 1rem;
+  padding: .5rem;
+  position: absolute;
+  width: $width;
+}

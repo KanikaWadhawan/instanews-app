@@ -45,38 +45,42 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-html {
-  font-family: 'Open Sans', Arial, sans-serif; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("/fonts/OpenSans-BoldItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("/fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/fonts/OpenSans-Bold.woff2") format("woff2"), url("/fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/fonts/OpenSans-Light.woff2") format("woff2"), url("/fonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  outline: none; }
+
+html {
+  font-family: Open Sans,sans-serif; }
 
 body {
   background: #000;
   color: #fff;
   font-size: 16px; }
-
-.loader-container {
-  display: none;
-  height: 100vh;
-  width: 100vw;
-  position: absolute; }
-
-.loader {
-  height: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-
-.image-loader {
-  width: 10%; }
 
 .container {
   display: -webkit-box;
@@ -133,11 +137,43 @@ img {
 select:focus {
   outline: none; }
 
+.loader-container {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: absolute; }
+
+.loader {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.image-loader {
+  width: 10%; }
+
 a {
   text-decoration: none; }
 
 .bckg-img {
-  background-size: cover; }
+  background-size: cover;
+  background-position: 50%;
+  height: 420px; }
+
+.result-data {
+  position: relative; }
+
+.result-data .abstract {
+  background: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  color: #fff;
+  position: absolute; }
 
 .footer p {
   color: #c2c2c2;
@@ -146,11 +182,28 @@ a {
   text-align: center;
   padding: 0 2rem;
   margin-top: 43px; }
-
-.footer p span {
-  text-transform: uppercase; }
+  .footer p span {
+    text-transform: uppercase; }
 
 @media only screen and (min-width: 480px) {
+  .nyt-logo {
+    padding-top: 263px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 109px; }
+  .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 25%;
+            flex: 0 1 25%;
+    margin: 0 1rem 0 0;
+    text-align: left;
+    max-width: 250px; }
   .selected-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -183,9 +236,9 @@ a {
         flex-wrap: wrap;
     height: 420px;
     width: 100%; }
-  .bckg-img p {
-    color: #fff;
-    line-height: 1.5rem; }
+    .bckg-img p {
+      color: #fff;
+      line-height: 1.5rem; }
   .result-data .abstract {
     background: rgba(0, 0, 0, 0.6);
     bottom: 0;
@@ -194,7 +247,11 @@ a {
     font-size: 1rem;
     padding: .5rem;
     position: absolute;
-    width: 100%; } }
+    width: 100%; }
+  .footer-section {
+    position: relative; }
+  .footer {
+    margin: 271px; } }
 
 @media only screen and (min-width: 1000px) {
   body {
@@ -203,11 +260,8 @@ a {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     width: 100%;
-    margin-top: 109px; }
+    padding-top: 155px; }
   .logo {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 25%;
@@ -258,7 +312,9 @@ a {
     padding: .5rem;
     position: absolute;
     width: 100%; }
+  .footer {
+    margin: 44px;
+    padding-top: 115px; }
   .footer p {
-    margin-top: 127px;
     text-align: left;
     font-size: 15px; } }

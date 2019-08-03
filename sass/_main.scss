@@ -1,30 +1,15 @@
 *{
     box-sizing: border-box;
+    outline: none;
 }
 
+html{
+    font-family: Open Sans,sans-serif;
+}
 body{
     background:$bck-color;
     color:$text-color;
     font-size : $text-size; 
-}
-.loader-container{
-    display: none;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-}
-.loader{
-    
-    height:50%;
-     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.image-loader{
-    width: $width/10;
-   
 }
 
 .container{
@@ -35,6 +20,7 @@ body{
     margin: 0 auto;
     max-width: 1600px;
     width: $width;
+    overflow: auto;
     }
 
     
@@ -44,27 +30,48 @@ img{
 }
 
 .nyt-logo{
-    align-content: center;
-  
-    display: flex;
-    
-    flex-wrap: wrap;
     height: 100%;
-    
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
+    @include tablet {
+       
+        padding-top: 263px;
+        align-items: center;
+        align-items: center;
+        width:$width;
+        margin-top: 109px;
+
+    }
+    @include desktop {
+       
+        justify-content: flex-start;
+        width:$width;
+        padding-top: 155px;
+
+    }
 }
 
 .logo{
-    
     margin-bottom: 1rem;
     text-align: center;
     display: block;
     width: 300vw;
     margin: 60px 0px 1rem 0px;
-    // margin-top: 171px;
-    // margin-left: 16px;
-    // margin-right: 78px;
+
+    @include tablet {
+       
+      @extend %base-logo;
+
+    }
+    @include desktop {
+       
+        @extend %base-logo;
+
+    }
+   
 }
 
 .select-section{
@@ -73,8 +80,33 @@ img{
     text-align: center;
     margin-bottom: 1rem;
     width: $width;
-    // margin-right: 53px;
+    @include tablet {
+       
+        @extend %base-selection;
+
+    }
+    @include desktop {
+       
+        @extend %base-selection;
+
+    }
+   
 }
+.selected-list{
+    @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: $width;
+}
+@include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: $width;
+}
+}
+
 .select-menu{
     margin-top: 16px;
     cursor:pointer;
@@ -82,17 +114,115 @@ img{
 
 select:focus {
     outline:none;
+    cursor:pointer;
 }
 
+
+.loader-container{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+.loader{
+    
+    height:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image-loader{
+    width: $width/10;
+   
+}
 a{
     text-decoration: none;
 }
 
 .bckg-img {
     background-size: cover;
+    background-position: 50%;
+    height:420px;
+    @include tablet {
+       
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height:420px; 
+        width:$width;
+        p{
+            color:$text-color;
+            line-height: 1.5rem;
+         
+        }
+
+    }
+    @include desktop {
+     
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height:420px; 
+            width:$width;
+     p{
+           color:$text-color;
+           line-height: 1.5rem;
+    }
+    
+    }
+
 
 }
 
+
+.result-data{
+        position: relative;
+    .abstract{
+
+        background: rgba(0,0,0,.6);
+        bottom: 0;
+        color: $text-color;
+        position: absolute;
+    }
+        
+    @include tablet {
+        flex: 0 1 50%;
+        max-width: 50%;
+        position: relative;
+     .abstract{
+
+        @extend %base-abstract;
+        }
+    }
+    @include desktop {
+        flex: 0 1 25%;
+        position: relative;
+     .abstract{
+        @extend %base-abstract;
+            
+        }  
+    }
+}
+
+
+
+// .result-data {
+
+// .abstract{
+
+//     background: rgba(0,0,0,.6);
+//     bottom: 0;
+//     color: $text-color;
+//     position: absolute;
+// }
+// }
+.footer-section{
+    @include tablet{
+    position:relative;
+}
+}
 
 .footer {
     p{
@@ -102,151 +232,186 @@ a{
         text-align: center;
         padding: 0 2rem;
         margin-top: 43px;
-//margin-bottom: 27px;
-
-// margin-right: 60px;
-}
-}
-
-.footer p span{
-    text-transform: uppercase;
-}
-
-@media only screen and (min-width:480px ) {
-   
-    .selected-list{
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        width: $width;
-    
+  span{
+        text-transform: uppercase;
     }
+}  
+@include tablet {
+    margin: 271px;
+}
+@include desktop {
+    margin: 44px;
+    padding-top: 33px;
+    p{
+        text-align: left;
+        font-size: 15px;
+    }
+}
+}
+
+
+
+// @media only screen and (min-width:480px ) {
+   
+// .nyt-logo{
+//         padding-top: 263px;
+//         justify-content: center;
+//         align-items: center;
+//         align-items: center;
+//         width:$width;
+//         margin-top: 109px;
+//  }
+// .logo{
+//     flex: 0 1 25%;
+//     margin: 0 1rem 0 0;
+//     text-align: left;
+//     max-width: 250px;
+// }
+
+// .selected-list{
+//         display: flex;
+//         flex-wrap: wrap;
+//         margin: 0 auto;
+//         width: $width;
+    
+//  }
    
    
-    .result-data{
+//  .result-data{
         
-    flex: 0 1 50%;
-    max-width: 50%;
-    position: relative;
-}
+//     flex: 0 1 50%;
+//     max-width: 50%;
+//     position: relative;
+// }
 
-.select-section{
-    flex: 0 1 75%;
-    text-align: left;
-    max-width: 250px;
-}
+// .select-section{
+//     flex: 0 1 75%;
+//     text-align: left;
+//     max-width: 250px;
+// }
 
-.bckg-img{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height:420px; 
+// .bckg-img{
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     height:420px; 
+//     width:$width;
+//     p{
+//         color:$text-color;
         
-    width:$width;
+//         line-height: 1.5rem;
+     
+//     }
     
-}
+// }
 
-.bckg-img p{
-    color:$text-color;
-    
-    line-height: 1.5rem;
-}
-.result-data .abstract{
 
-    background: rgba(0,0,0,.6);
-    bottom: 0;
-    color: #fff;
-    
-    // display: flex;
-    font-size: 10px;
-    font-size: 1rem;
-    padding: .5rem;
-     position: absolute;
+// .result-data .abstract{
+
+//     background: rgba(0,0,0,.6);
+//     bottom: 0;
+//     color: $text-color;
+//     font-size: 10px;
+//     font-size: 1rem;
+//     padding: .5rem;
+//     position: absolute;
    
-    width: $width;
-    // margin-top: 222px;
-}
-
-}
-
-
-@media only screen and (min-width:1000px ) {
-body{
-    font-size: $text-size;
+//     width: $width;
     
-}
+// }
+
+// .footer-section{
+//     position:relative;
+    
+// }
+
+// .footer{
+//     margin: 271px;
+// }
+
+//}
 
 
- .nyt-logo{
-        justify-content: flex-start;
-        align-items: center;
-        width:$width;
-        margin-top: 109px;
- }
-.logo{
-    flex: 0 1 25%;
-    margin: 0 1rem 0 0;
-    text-align: left;
-    max-width: 250px;
-}
+// @media only screen and (min-width:1000px ) {
+// body{
+//     font-size: $text-size;
+    
+// }
 
-.selected-list{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: $width;
 
-}
+//  .nyt-logo{
+//         justify-content: flex-start;
+//         // align-items: center;
+//         width:$width;
+//         // margin-top: 109px;
+//         padding-top: 155px;
+//  }
+// .logo{
+//     flex: 0 1 25%;
+//     margin: 0 1rem 0 0;
+//     text-align: left;
+//     max-width: 250px;
+// }
 
-.result-data{
-    flex: 0 1 25%;
-    position: relative;
-}
+// .selected-list{
+//     display: flex;
+//     flex-wrap: wrap;
+//     margin: 0 auto;
+//     width: $width;
 
-.select-section{
-    flex: 0 1 75%;
-    text-align: left;
-    max-width: 250px;
-}
+// }
 
-.bckg-img{
-    display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height:420px; 
+// .result-data{
+//     flex: 0 1 25%;
+//     position: relative;
+// }
+
+// .select-section{
+//     flex: 0 1 75%;
+//     text-align: left;
+//     max-width: 250px;
+// }
+
+// .bckg-img{
+//         display: flex;
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//         height:420px; 
         
-        width:$width;
+//         width:$width;
     
-}
+// }
 
-.bckg-img p{
-    color:$text-color;
+// .bckg-img p{
+//     color:$text-color;
     
-    line-height: 1.5rem;
-}
+//     line-height: 1.5rem;
+// }
 
-.result-data .abstract{
+// .result-data .abstract{
 
-    background: rgba(0,0,0,.6);
-    bottom: 0;
-    color: #fff;
+//     background: rgba(0,0,0,.6);
+//     bottom: 0;
+//     color: #fff;
     
-    // display: flex;
-    font-size: 10px;
-    font-size: 1rem;
-    padding: .5rem;
-     position: absolute;
-    width: $width;
-    // margin-top: 222px;
-}
+//     font-size: 10px;
+//     font-size: 1rem;
+//     padding: .5rem;
+//      position: absolute;
+//     width: $width;
+    
+// }
+
+// .footer{
+//     margin: 44px;
+//     padding-top: 115px;
+// }
 
 
+// .footer p{
+   
+//     text-align: left;
+//     font-size: 15px;
+// }
 
-
-.footer p{
-    margin-top: 127px;
-    text-align: left;
-    font-size: 15px;
-}
-
-}
+// }

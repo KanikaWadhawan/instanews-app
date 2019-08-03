@@ -41,7 +41,7 @@ $(function () {
         console.log(value);
         $selectedList.append(`
               <li class="result-data">
-              <a href ="${value.url}" >
+              <a href ="${value.url}" target="_blank" >
       <div class="bckg-img" style="background-image: url(${value.multimedia[4].url})">
         
         <p class="abstract">${value.abstract}</p>
