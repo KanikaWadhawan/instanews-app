@@ -3,6 +3,7 @@
     outline: none;
 }
 
+
 html{
     font-family: Open Sans,sans-serif;
 }
@@ -47,9 +48,10 @@ img{
     }
     @include desktop {
        
+        margin-top: 0;
         justify-content: flex-start;
         width:$width;
-        padding-top: 155px;
+        padding-top: 140px;
 
     }
 }
@@ -60,15 +62,18 @@ img{
     display: block;
     width: 300vw;
     margin: 60px 0px 1rem 0px;
+    transition: all .5s ease-out .5s;
 
     @include tablet {
        
-      @extend %base-logo;
+      @include base-logo;
+      transition: all .5s ease-out .5s;
 
     }
     @include desktop {
        
-        @extend %base-logo;
+        @include base-logo;
+        transition: all .5s ease-out .5s;
 
     }
    
@@ -82,12 +87,12 @@ img{
     width: $width;
     @include tablet {
        
-        @extend %base-selection;
+        @include base-selection;
 
     }
     @include desktop {
        
-        @extend %base-selection;
+        @include base-selection;
 
     }
    
@@ -193,31 +198,20 @@ a{
         position: relative;
      .abstract{
 
-        @extend %base-abstract;
+        @include base-abstract;
         }
     }
     @include desktop {
         flex: 0 1 25%;
         position: relative;
      .abstract{
-        @extend %base-abstract;
+        @include base-abstract;
             
         }  
     }
 }
 
 
-
-// .result-data {
-
-// .abstract{
-
-//     background: rgba(0,0,0,.6);
-//     bottom: 0;
-//     color: $text-color;
-//     position: absolute;
-// }
-// }
 .footer-section{
     @include tablet{
     position:relative;
@@ -236,182 +230,16 @@ a{
         text-transform: uppercase;
     }
 }  
-@include tablet {
-    margin: 271px;
-}
-@include desktop {
-    margin: 44px;
-    padding-top: 33px;
-    p{
+   @include tablet {
+        margin: 271px;
+    }
+   @include desktop {
+        margin: 44px;
+        padding-top: 33px;
+      p{
         text-align: left;
         font-size: 15px;
     }
 }
 }
 
-
-
-// @media only screen and (min-width:480px ) {
-   
-// .nyt-logo{
-//         padding-top: 263px;
-//         justify-content: center;
-//         align-items: center;
-//         align-items: center;
-//         width:$width;
-//         margin-top: 109px;
-//  }
-// .logo{
-//     flex: 0 1 25%;
-//     margin: 0 1rem 0 0;
-//     text-align: left;
-//     max-width: 250px;
-// }
-
-// .selected-list{
-//         display: flex;
-//         flex-wrap: wrap;
-//         margin: 0 auto;
-//         width: $width;
-    
-//  }
-   
-   
-//  .result-data{
-        
-//     flex: 0 1 50%;
-//     max-width: 50%;
-//     position: relative;
-// }
-
-// .select-section{
-//     flex: 0 1 75%;
-//     text-align: left;
-//     max-width: 250px;
-// }
-
-// .bckg-img{
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     height:420px; 
-//     width:$width;
-//     p{
-//         color:$text-color;
-        
-//         line-height: 1.5rem;
-     
-//     }
-    
-// }
-
-
-// .result-data .abstract{
-
-//     background: rgba(0,0,0,.6);
-//     bottom: 0;
-//     color: $text-color;
-//     font-size: 10px;
-//     font-size: 1rem;
-//     padding: .5rem;
-//     position: absolute;
-   
-//     width: $width;
-    
-// }
-
-// .footer-section{
-//     position:relative;
-    
-// }
-
-// .footer{
-//     margin: 271px;
-// }
-
-//}
-
-
-// @media only screen and (min-width:1000px ) {
-// body{
-//     font-size: $text-size;
-    
-// }
-
-
-//  .nyt-logo{
-//         justify-content: flex-start;
-//         // align-items: center;
-//         width:$width;
-//         // margin-top: 109px;
-//         padding-top: 155px;
-//  }
-// .logo{
-//     flex: 0 1 25%;
-//     margin: 0 1rem 0 0;
-//     text-align: left;
-//     max-width: 250px;
-// }
-
-// .selected-list{
-//     display: flex;
-//     flex-wrap: wrap;
-//     margin: 0 auto;
-//     width: $width;
-
-// }
-
-// .result-data{
-//     flex: 0 1 25%;
-//     position: relative;
-// }
-
-// .select-section{
-//     flex: 0 1 75%;
-//     text-align: left;
-//     max-width: 250px;
-// }
-
-// .bckg-img{
-//         display: flex;
-//         flex-direction: row;
-//         flex-wrap: wrap;
-//         height:420px; 
-        
-//         width:$width;
-    
-// }
-
-// .bckg-img p{
-//     color:$text-color;
-    
-//     line-height: 1.5rem;
-// }
-
-// .result-data .abstract{
-
-//     background: rgba(0,0,0,.6);
-//     bottom: 0;
-//     color: #fff;
-    
-//     font-size: 10px;
-//     font-size: 1rem;
-//     padding: .5rem;
-//      position: absolute;
-//     width: $width;
-    
-// }
-
-// .footer{
-//     margin: 44px;
-//     padding-top: 115px;
-// }
-
-
-// .footer p{
-   
-//     text-align: left;
-//     font-size: 15px;
-// }
-
-// }

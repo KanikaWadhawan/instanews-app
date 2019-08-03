@@ -1,4 +1,4 @@
-@mixin desktop {
+@mixin tablet {
     @media (min-width: $tablet-width) {
       @content;
     }
@@ -11,20 +11,20 @@
     }
   }
 
-  %base-logo {
+  @mixin base-logo {
     flex: 0 1 25%;
     margin: 0 1rem 0 0;
     text-align: left;
     max-width: 250px;
  }
 
- %base-selection {
+ @mixin base-selection {
   flex: 0 1 75%;
   text-align: left;
   max-width: 250px;
 }
 
-%base-abstract {
+@mixin base-abstract {
   background: rgba(0,0,0,.6);
   bottom: 0;
   color: #fff;
