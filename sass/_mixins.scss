@@ -34,3 +34,11 @@
   position: absolute;
   width: $width;
 }
+
+@mixin base-backimage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height:420px; 
+  width:$width;  
+}

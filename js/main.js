@@ -3,6 +3,7 @@ $(function () {
   const resFail = "<li>Sorry, something went terribly wrong</li>";
   const $loader = $(".loader-container");
   const $loadTime = 1000;
+  const $target= "_blank";
 
   $('#select-menu').on('change', function (e) {
     e.preventDefault();
@@ -41,11 +42,11 @@ $(function () {
         console.log(value);
         $selectedList.append(`
               <li class="result-data">
-              <a href ="${value.url}" target="_blank" >
+              <a href ="${value.url}" target="${$target}" >
       <div class="bckg-img" style="background-image: url(${value.multimedia[4].url})">
-        
+      </div>
         <p class="abstract">${value.abstract}</p>
-        </div>
+       
         </a>
       </li>
              ` )

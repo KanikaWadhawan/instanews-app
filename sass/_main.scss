@@ -148,48 +148,54 @@ a{
 
 .bckg-img {
     background-size: cover;
-    background-position: 50%;
-    height:420px;
+    background-position: 50% 50%;
+    height:100%;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
     @include tablet {
        
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height:420px; 
-        width:$width;
+       @include base-backimage;
         p{
             color:$text-color;
-            line-height: 1.5rem;
+            line-height: 1.6rem;
          
         }
 
     }
     @include desktop {
      
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            height:420px; 
-            width:$width;
+        @include base-backimage;
      p{
            color:$text-color;
-           line-height: 1.5rem;
+           line-height: 1.6rem;
     }
-    
     }
-
-
 }
 
 
 .result-data{
         position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        height:420px;
     .abstract{
 
         background: rgba(0,0,0,.6);
         bottom: 0;
         color: $text-color;
         position: absolute;
+        // transform:translateY(100%);
+        transition: transform  0.8s;
+    }
+    &:hover{
+        .bckg-img{
+        
+           transform:scale(1.2);
+        }
+        .abstract{
+           transform: translateY(0);
+        }
     }
         
     @include tablet {
@@ -204,9 +210,10 @@ a{
     @include desktop {
         flex: 0 1 25%;
         position: relative;
+        
      .abstract{
         @include base-abstract;
-            
+        transform:translateY(100%);   
         }  
     }
 }

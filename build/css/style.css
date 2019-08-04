@@ -238,8 +238,13 @@ a {
 
 .bckg-img {
   background-size: cover;
-  background-position: 50%;
-  height: 420px; }
+  background-position: 50% 50%;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1); }
   @media (min-width: 480px) {
     .bckg-img {
       display: -webkit-box;
@@ -255,7 +260,7 @@ a {
       width: 100%; }
       .bckg-img p {
         color: #fff;
-        line-height: 1.5rem; } }
+        line-height: 1.6rem; } }
   @media (min-width: 1000px) {
     .bckg-img {
       display: -webkit-box;
@@ -271,15 +276,28 @@ a {
       width: 100%; }
       .bckg-img p {
         color: #fff;
-        line-height: 1.5rem; } }
+        line-height: 1.6rem; } }
 
 .result-data {
-  position: relative; }
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  height: 420px; }
   .result-data .abstract {
     background: rgba(0, 0, 0, 0.6);
     bottom: 0;
     color: #fff;
-    position: absolute; }
+    position: absolute;
+    -webkit-transition: -webkit-transform  0.8s;
+    transition: -webkit-transform  0.8s;
+    transition: transform  0.8s;
+    transition: transform  0.8s, -webkit-transform  0.8s; }
+  .result-data:hover .bckg-img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+  .result-data:hover .abstract {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
   @media (min-width: 480px) {
     .result-data {
       -webkit-box-flex: 0;
@@ -310,7 +328,9 @@ a {
         font-size: 1rem;
         padding: .5rem;
         position: absolute;
-        width: 100%; } }
+        width: 100%;
+        -webkit-transform: translateY(100%);
+                transform: translateY(100%); } }
 
 @media (min-width: 480px) {
   .footer-section {
