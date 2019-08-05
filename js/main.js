@@ -1,5 +1,5 @@
 $(function () {
-  //const resLoading = "<li class='loading-msg'>Loading...</li>";
+ 
   const resFail = "<li>Sorry, something went terribly wrong</li>";
   const $loader = $(".loader-container");
   const $loadTime = 1000;
@@ -21,14 +21,14 @@ $(function () {
     const $selectedList = $(".selected-list");
 
     $selectedList.html("");
-    // $selectedList.append(resLoading);
+    
     $loader.fadeIn($loadTime);
 
     $.ajax({
       method: 'get',
       url: 'https://api.nytimes.com/svc/topstories/v2/' + selected + '.json?api-key=aH4FAhLkiG9ICtGxYuBVuGhjQviN4Geb'
     }).done(function (data) {
-      // console.log(data.results);
+     
       $loader.fadeOut($loadTime);
       const results = data.results;
 
@@ -38,10 +38,10 @@ $(function () {
 
 
 
-      // console.log("filtered", filteredResults);
+     
 
       $.each(filteredResults, function (index, value) {
-        // console.log(value);
+        
         $selectedList.append(`
               <li class="result-data">
               <a href ="${value.url}" target="${$target}" >
@@ -56,9 +56,7 @@ $(function () {
     }).fail(function () {
       $selectedList.append(resFail);
     }).always(function () {
-      // $selectedList.html("");
-      // $('.loading-msg').remove();
-     // $loader.fadeOut($loadTime);
+     
     });
   }
 
