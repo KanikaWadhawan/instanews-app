@@ -93,18 +93,20 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   max-width: 1600px;
   width: 100%;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-transition: all 1s;
+  transition: all 1s; }
 
 img {
   height: auto;
   max-width: 100%; }
 
 .nyt-logo {
-  height: 100%;
+  overflow: hidden;
   -ms-flex-line-pack: center;
       align-content: center;
   display: -webkit-box;
@@ -115,24 +117,34 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2rem; }
+  padding: 2rem;
+  -webkit-transition: all 1s;
+  transition: all 1s; }
+  .nyt-logo.active .logo {
+    margin: 0 0 10px 0;
+    height: 70px; }
+    .nyt-logo.active .logo img {
+      width: auto;
+      height: 100%; }
   @media (min-width: 480px) {
     .nyt-logo {
-      padding-top: 263px;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
       align-items: center;
       width: 100%;
-      margin-top: 109px; } }
+      margin-top: 35vh; }
+      .nyt-logo.active {
+        margin-top: 0vh; } }
   @media (min-width: 1000px) {
     .nyt-logo {
-      margin-top: 0;
+      margin-top: 240px;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
-      width: 100%;
-      padding-top: 140px; } }
+      width: 100%; }
+      .nyt-logo.active {
+        margin-top: 0; } }
 
 .logo {
   margin-bottom: 1rem;
@@ -140,8 +152,8 @@ img {
   display: block;
   width: 300vw;
   margin: 60px 0px 1rem 0px;
-  -webkit-transition: all .5s ease-out .5s;
-  transition: all .5s ease-out .5s; }
+  -webkit-transition: all 1s;
+  transition: all 1s; }
   @media (min-width: 480px) {
     .logo {
       -webkit-box-flex: 0;
@@ -149,9 +161,7 @@ img {
               flex: 0 1 25%;
       margin: 0 1rem 0 0;
       text-align: left;
-      max-width: 250px;
-      -webkit-transition: all .5s ease-out .5s;
-      transition: all .5s ease-out .5s; } }
+      max-width: 250px; } }
   @media (min-width: 1000px) {
     .logo {
       -webkit-box-flex: 0;
@@ -159,9 +169,7 @@ img {
               flex: 0 1 25%;
       margin: 0 1rem 0 0;
       text-align: left;
-      max-width: 250px;
-      -webkit-transition: all .5s ease-out .5s;
-      transition: all .5s ease-out .5s; } }
+      max-width: 250px; } }
 
 .select-section {
   display: inline-block;
@@ -345,10 +353,6 @@ a {
   margin-top: 43px; }
   .footer p span {
     text-transform: uppercase; }
-
-@media (min-width: 480px) {
-  .footer {
-    margin: 271px; } }
 
 @media (min-width: 1000px) {
   .footer {

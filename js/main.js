@@ -7,9 +7,11 @@ $(function () {
 
   $('#select-menu').on('change', function (e) {
     e.preventDefault();
+    
     const selected = $(this).val();
     if (selected !== '') {
       console.log('The value you picked is: ' + selected);
+      $(".nyt-logo").addClass("active");
       loadArticles(selected);
     }
   });
@@ -36,10 +38,10 @@ $(function () {
 
 
 
-      console.log("filtered", filteredResults);
+      // console.log("filtered", filteredResults);
 
       $.each(filteredResults, function (index, value) {
-        console.log(value);
+        // console.log(value);
         $selectedList.append(`
               <li class="result-data">
               <a href ="${value.url}" target="${$target}" >

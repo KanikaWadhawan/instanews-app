@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +10,45 @@
     <link rel="stylesheet" href="./fonts/stylesheet.css">
     <link rel="stylesheet" href="./build/css/style.min.css">
 </head>
+
 <body>
-    
+
     <div class="container">
-   
-    <header class="nyt-logo">
-        <div class="logo">
-        <img src="images/nyt-logo.svg" alt="nyt-logo" />
-    
+
+        <header class="nyt-logo">
+            <div class="logo">
+                <img src="images/nyt-logo.svg" alt="nyt-logo" />
+            </div>
+            <div class="select-section">
+                <p>Choose a section:</p>
+                <select id="select-menu" class="select-menu">
+                    <option value="">Sections...</option>
+                    <option value="home">Home</option>
+                    <option value="arts">Arts</option>
+                    <option value="business">Business</option>
+                    <option value="sports">Sports</option>
+                    <option value="technology">Technology</option>
+                    <option value="fashion">Fashion</option>
+
+                </select>
+            </div>
+        </header>
+        <div class="loader-container">
+            <div class="loader">
+                <img src="images/ajax-loader.gif" alt="loading-image" class="image-loader" />
+            </div>
+        </div>
+
+        <ul class="selected-list"></ul>
+        <div class="footer-section">
+            <footer class="footer">
+                <p>© Copyright 2019 <span>Instanews</span></p>
+            </footer>
+        </div>
     </div>
-    <div class="select-section">
-    <p>Choose a section:</p>
-    <select id="select-menu" class="select-menu">
-        <option value="">Sections...</option>
-        <option value="home">Home</option>
-        <option value="arts">Arts</option>
-        <option value="business">Business</option>
-        <option value="sports">Sports</option>
-        <option value="technology">Technology</option>
-        <option value="fashion">Fashion</option>
-
-     </select>
-    </div> 
-</header>
-<div class="loader-container">
-<div class="loader">
-    <img src="images/ajax-loader.gif" alt="loading-image" class="image-loader" />
-</div>
-</div>
-
-<ul class="selected-list"></ul>
-   <div class="footer-section"> 
-<footer class="footer">
-     <p>© Copyright 2019 <span>Instanews</span></p>
-    </footer>
-</div>
-</div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./build/js/main.min.js"></script>
 </body>
+
 </html>
