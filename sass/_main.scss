@@ -17,7 +17,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh;
+    min-height: $height;
     margin: 0 auto;
     max-width: 1600px;
     width: $width;
@@ -147,7 +147,7 @@ select:focus {
 
 .loader-container{
     display: none;
-    height: 100vh;
+    height: $height;
     width: 100vw;
     position: absolute;
 }
@@ -181,6 +181,7 @@ a{
         p{
             color:$text-color;
             line-height: 1.6rem;
+            text-align: center;
          
         }
 
