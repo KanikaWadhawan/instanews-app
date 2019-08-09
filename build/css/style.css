@@ -131,7 +131,6 @@ img {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      align-items: center;
       width: 100%;
       margin-top: 35vh; }
       .nyt-logo.active {
@@ -267,7 +266,8 @@ a {
       width: 100%; }
       .bckg-img p {
         color: #fff;
-        line-height: 1.6rem; } }
+        line-height: 1.6rem;
+        text-align: center; } }
   @media (min-width: 1000px) {
     .bckg-img {
       display: -webkit-box;

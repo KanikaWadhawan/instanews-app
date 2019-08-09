@@ -56,7 +56,6 @@ img{
     @include tablet {
        
         align-items: center;
-        align-items: center;
         width:$width;
         margin-top: 35vh;
         
@@ -68,12 +67,6 @@ img{
      }
     @include desktop {
        justify-content: flex-start;
-        width:$width;
-      
-        &.active {
-            margin-top: 0;
-          
-        }
     }
    
 }
@@ -260,9 +253,8 @@ a{
         text-transform: uppercase;
     }
 }  
-   @include tablet {
-        
-    }
+   
+  
    @include desktop {
         margin: 44px;
         padding-top: 33px;
