@@ -139,10 +139,7 @@ img {
     .nyt-logo {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
-              justify-content: flex-start;
-      width: 100%; }
-      .nyt-logo.active {
-        margin-top: 0; } }
+              justify-content: flex-start; } }
 
 .logo {
   margin-bottom: 1rem;
@@ -212,6 +209,7 @@ img {
 
 .select-menu {
   margin-top: 16px;
+  background-color: white;
   cursor: pointer; }
 
 select:focus {
