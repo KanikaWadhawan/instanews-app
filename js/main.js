@@ -36,10 +36,6 @@ $(function () {
         return article.multimedia.length;
       }).slice(0, 12);
 
-
-
-     
-
       $.each(filteredResults, function (index, value) {
         
         $selectedList.append(`
