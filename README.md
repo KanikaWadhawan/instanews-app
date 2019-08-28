@@ -3,6 +3,8 @@
 This is a One-page responsive website that allows a user to filter top news story categories via the New York Times API.
 Optimize for 3 widths: mobile, min-width: 420px and min-width: 1000px
 
+You can find the site : [Site URL](https://kanikawadhawan.github.io/instanews-app/)
+
 ### Desktop Preview
 ![Desktop Preview](images/desktop-front.png)
 ![Desktop Articles Preview](images/desktop-articles-compressor.png)
